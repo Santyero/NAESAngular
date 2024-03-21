@@ -10,16 +10,47 @@ import { EstagioServiceService } from '../estagio.service';
   styleUrl: './estagio.component.scss'
 })
 export class EstagioComponent {
-  nome: string = '';
+  estudante: string = '';
+  empresa: string = '';
+  data_inicio: Date = new Date();
+  data_termino: Date = new Date();
+  carga_horaria: number = 0;
 
+  listaItens = [
+    {
+      estudante: 'sim',
+      empresa: 'sim2',
+      data_inicio: '21/07/2001',
+      data_termino: '22/07/2001',
+      carga_horaria: 1
+    },
+    {
+      estudante: 'sim',
+      empresa: 'sim2',
+      data_inicio: '21/07/2001',
+      data_termino: '22/07/2001',
+      carga_horaria: 1
+    },
+    {
+      estudante: 'sim',
+      empresa: 'sim2',
+      data_inicio: '21/07/2001',
+      data_termino: '22/07/2001',
+      carga_horaria: 1
+    },
+    {
+      estudante: 'sim',
+      empresa: 'sim2',
+      data_inicio: '21/07/2001',
+      data_termino: '22/07/2001',
+      carga_horaria: 1
+    },
+  ]
   constructor(
-    // private estagioService: EstagioServiceService
+    private estagioService: EstagioServiceService
   ) {}
 
   save() {
-    const dados = {
-      nome: this.nome
-    }
     // this.estagioService.get().subscribe({
     //     next: (dados) => {
     //         console.log("salvo com sucesso")
@@ -28,6 +59,10 @@ export class EstagioComponent {
     //         console.log(error?.message)
     //     }
     //  })
+  }
+
+  excluir(item: any) {
+
   }
   
 }

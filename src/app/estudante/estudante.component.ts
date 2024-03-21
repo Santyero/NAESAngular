@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
-import { EstudanteService } from '../estudante.service';
+import { Estudante, EstudanteService } from '../estudante.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-type Estudante = {
-  nome: string,
-  matricula: string,
-  data_nascimento: string,
-  email: string
-}
 
 @Component({
   selector: 'app-estudante',

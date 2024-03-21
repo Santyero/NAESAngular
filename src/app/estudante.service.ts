@@ -1,6 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+export type Estudante = {
+  nome: string,
+  matricula: string,
+  data_nascimento: string,
+  email: string
+}
+
+
 @Injectable({
   providedIn: 'root'
 })

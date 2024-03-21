@@ -1,1 +1,60 @@
-<input type="text" [(ngModel)]="nome">
+<div>
+    <div class="Formulario">
+        <h1> Cadastro de Estagio</h1>
+        <div class="container-botao">
+            <span>estudante</span>
+            <input type="text" [(ngModel)]="estudante">
+        </div>
+
+        <div class="container-botao">
+            <span>empresa</span>
+            <input type="text" [(ngModel)]="empresa">
+        </div>
+
+        <div class="container-botao">
+            <span>data inicio</span>
+            <input type="date" [(ngModel)]="data_inicio">
+        </div>
+
+        <div class="container-botao">
+            <span>data termino</span>
+            <input type="date" [(ngModel)]="data_termino">
+        </div>
+
+        <div class="container-botao">
+            <span>carga horaria</span>
+            <input type="number" [(ngModel)]="carga_horaria">
+        </div>
+
+
+        <div class="botao-confirmacao">
+            <button>Salvar</button>
+        </div>
+
+    </div>
+
+
+    <table class="tabela">
+        <thead>
+            <th>estudante</th>
+            <th>empresa</th>
+            <th>data_inicio</th>
+            <th>data_termino</th>
+            <th>botoes</th>
+            <th>carga_horaria</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listaItens">
+                <td>{{item.estudante}}</td>
+                <td>{{item.empresa}}</td>
+                <td>{{item.data_inicio}}</td>
+                <td>{{item.data_termino}}</td>
+                <td>{{item.carga_horaria}}</td>
+                <td class="table-buttons">
+                    <button class="trash" (click)="excluir(item)">🗑</button>
+                    <button class="pencil">🖊</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
