@@ -13,21 +13,21 @@ export class EstagioComponent {
   nome: string = '';
 
   constructor(
-    private estagioService: EstagioServiceService
+    // private estagioService: EstagioServiceService
   ) {}
 
   save() {
     const dados = {
       nome: this.nome
     }
-    this.estagioService.get(dados).subscribe({
-        next: (dados) => {
-            console.log("salvo com sucesso")
-        },
-        error: (error: any) => {
-            console.log(error?.message)
-        }
-     })
+    // this.estagioService.get().subscribe({
+    //     next: (dados) => {
+    //         console.log("salvo com sucesso")
+    //     },
+    //     error: (error: any) => {
+    //         console.log(error?.message)
+    //     }
+    //  })
   }
   
 }

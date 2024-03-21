@@ -1,0 +1,21 @@
+.principal {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        background-color: rgba(221, 212, 212, 0.863);
+        border: 1px solid black;
+        border-radius: 20px;
+        color: rgb(2, 19, 2);
+        padding: 20px 50px;
+        font-size: 20px;
+
+        
+    }
+
+    button:hover {
+        color: green,
+    }
+
+}

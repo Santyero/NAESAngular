@@ -1,1 +1,54 @@
-<input type="text" [(ngModel)]="nome">
+<div>
+    <div class="Formulario">
+        <h1> Cadastro de Estudante</h1>
+        <div class="container-botao">
+            <span>nome</span>
+            <input type="text" [(ngModel)]="nome">
+        </div>
+    
+    
+        <div class="container-botao">
+            <span>matricula</span>
+            <input type="text" [(ngModel)]="matricula">
+        </div>
+    
+        <div class="container-botao">
+            <span>data nascimento</span>
+            <input type="date" [(ngModel)]="data_nascimento">
+        </div>
+    
+    
+        <div class="container-botao">
+            <span>email</span>
+            <input type="email" [(ngModel)]="email">
+        </div>
+    
+        <div class="botao-confirmacao">
+            <button>Salvar</button>
+        </div>
+    
+    </div>
+
+
+    <table class="tabela">
+        <thead>
+            <th>nome</th>
+            <th>matricula</th>
+            <th>data_nascimento</th>
+            <th>email</th>
+            <th>botoes</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listaItens">
+                <td>{{item.nome}}</td>
+                <td>{{item.matricula}}</td>
+                <td>{{item.data_nascimento}}</td>
+                <td>{{item.email}}</td>
+                <td class="table-buttons">
+                    <button class="trash" (click)="excluir(item)">🗑</button>
+                    <button class="pencil">🖊</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

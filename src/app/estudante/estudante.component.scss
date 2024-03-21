@@ -1,0 +1,60 @@
+.Formulario {
+    border: 1px solid rgba(0, 0, 0, 0.986);
+    padding: 20px;
+
+    .container-botao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao-confirmacao {
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            background-color: green;
+            color: white;
+            border: 0px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 12px;
+        }
+    }
+
+    
+}
+
+table {
+    margin-top: 30px;
+    width: 100% !important;
+
+    th {
+        border: 1px solid rgba(0, 0, 0, 0.384);
+    }
+    
+    tr {
+        background-color: rgba(109, 109, 109, 0.164);
+    }
+
+    .table-buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        button {
+            font-size: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.384);
+            
+            &.pencil {
+                background-color: yellow;
+                color: black;
+            }
+
+            &.trash {
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}
